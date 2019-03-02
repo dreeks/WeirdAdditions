@@ -12,6 +12,11 @@ public class Common implements IProxy {
     }
 
     @Override
+    public void registerRenders() {
+
+    }
+
+    @Override
     public boolean isClient() {
         return false;
     }

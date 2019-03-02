@@ -1,15 +1,15 @@
 package xyz.dreeks.weirdadditions.items;
 
-import net.minecraft.item.Item;
+import net.minecraft.item.ItemFood;
 import xyz.dreeks.weirdadditions.WeirdAdditions;
 
-public class ItemBase extends Item {
+public class ItemBaseFood extends ItemFood {
 
-    public ItemBase(String unlocalizedName) {
+    public ItemBaseFood(String unlocalizedName, int amount, float saturation, boolean isWolfFood) {
+        super(amount, saturation, isWolfFood);
         this.setRegistryName(unlocalizedName);
         this.setUnlocalizedName(unlocalizedName);
         this.setCreativeTab(WeirdAdditions.instance.creativeTab);
     }
-
 
 }

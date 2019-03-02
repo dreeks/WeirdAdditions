@@ -15,11 +15,8 @@ import xyz.dreeks.weirdadditions.proxy.IProxy;
 import xyz.dreeks.weirdadditions.utils.Constants;
 import xyz.dreeks.weirdadditions.utils.WACreativeTab;
 
-@Mod(modid = WeirdAdditions.MODID, name = WeirdAdditions.NAME, version = WeirdAdditions.VERSION)
+@Mod(modid = Constants.MOD_ID, name = Constants.MOD_NAME, version = Constants.MOD_VERS)
 public class WeirdAdditions {
-    public static final String MODID = "weirdadditions";
-    public static final String NAME = "WeirdAdditions";
-    public static final String VERSION = "0.1";
 
     public static WAConfiguration config;
 
@@ -50,6 +47,8 @@ public class WeirdAdditions {
 
     @EventHandler
     public void init(FMLInitializationEvent event) {
+        FurnaceRecipes.load();
+        proxy.registerRenders();
 
     }
 }
