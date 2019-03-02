@@ -14,12 +14,6 @@ public class BlockBase extends Block {
         this.setUnlocalizedName(name);
         this.setRegistryName(name);
         this.setCreativeTab(WeirdAdditions.instance.creativeTab);
-
-        ForgeRegistries.BLOCKS.register(this);
-
-        if (this instanceof IHasItem && ((IHasItem)this).hasItem()) {
-            ForgeRegistries.ITEMS.register(new ItemBlock(this).setRegistryName(this.getRegistryName()));
-        }
     }
 
 }
