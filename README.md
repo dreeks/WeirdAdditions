@@ -3,7 +3,9 @@
 ## Feature
     - Plantable & growable fish
     - Plantable & growable cow
-    - Flyships
+    - Food in a bottle
+    - New vinyls (Wii mii music & Homebrew Channel music)
+    - Cookable rotten flesh
 
 ## Why ?
 We were playing on our own modpack when we got this stupid idea, planting fish & cows. So we decided to make it.
