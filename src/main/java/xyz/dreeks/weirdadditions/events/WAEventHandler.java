@@ -3,6 +3,8 @@ package xyz.dreeks.weirdadditions.events;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundEvent;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
@@ -12,10 +14,11 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.registries.IForgeRegistry;
 import xyz.dreeks.weirdadditions.items.WAItems;
-import xyz.dreeks.weirdadditions.utils.Constants;
+
+import static xyz.dreeks.weirdadditions.utils.Constants.MOD_ID;
 
 
-@Mod.EventBusSubscriber(modid = Constants.MOD_ID)
+@Mod.EventBusSubscriber(modid = MOD_ID)
 public class WAEventHandler {
 
     @SubscribeEvent
@@ -38,5 +41,4 @@ public class WAEventHandler {
             ModelLoader.setCustomModelResourceLocation(i, 0, new ModelResourceLocation(i.getRegistryName(), "inventory"));
         }
     }
-
 }

@@ -12,6 +12,7 @@ public class WAItems {
     public static ItemSporeExtractor sporeExtractor;
     public static ItemSlightlyLessRottenFlesh slightlyLessRottenFlesh;
     public static ItemEvenLessRottenFlesh evenLessRottenFlesh;
+    public static ItemRecordHomebrew recordHomebrew;
 
     public static void preInit(FMLPreInitializationEvent fpie) {
         /**
@@ -20,7 +21,7 @@ public class WAItems {
         items.add(sporeExtractor = new ItemSporeExtractor());
         items.add(slightlyLessRottenFlesh = new ItemSlightlyLessRottenFlesh());
         items.add(evenLessRottenFlesh = new ItemEvenLessRottenFlesh());
-
+        items.add(recordHomebrew = new ItemRecordHomebrew());
     }
 
 }
