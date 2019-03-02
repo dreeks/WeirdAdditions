@@ -10,7 +10,7 @@ import xyz.dreeks.weirdadditions.WeirdAdditions;
 public class ItemSporeExtractor extends ItemBase {
 
     public ItemSporeExtractor() {
-        super("sporeExtractor");
+        super("spore_extractor");
         this.setMaxStackSize(1);
         this.setMaxDamage(WeirdAdditions.instance.config.SPOREEXTRACTOR_MAX_DAMAGE);
     }

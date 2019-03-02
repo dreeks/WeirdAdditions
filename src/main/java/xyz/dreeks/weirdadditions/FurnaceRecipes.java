@@ -10,6 +10,8 @@ public class FurnaceRecipes {
     /** This class will disappear as soon as Forge supports furnace JSON recipes **/
     public static void load() {
         GameRegistry.addSmelting(Item.getByNameOrId("rotten_flesh"), new ItemStack(WAItems.slightlyLessRottenFlesh), .0f);
+        GameRegistry.addSmelting(WAItems.slightlyLessRottenFlesh, new ItemStack(WAItems.evenLessRottenFlesh), .0f);
+        GameRegistry.addSmelting(WAItems.evenLessRottenFlesh, new ItemStack(Item.getByNameOrId("charcoal")), .0f);
     }
 
 }
