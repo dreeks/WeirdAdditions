@@ -1,0 +1,6 @@
+{
+  "parent": "block/crop",
+  "textures": {
+    "crop": "weirdadditions:blocks/crops_cow/crops_cow_2"
+  }
+}
