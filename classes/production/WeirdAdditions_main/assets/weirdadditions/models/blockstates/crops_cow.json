@@ -1,0 +1,35 @@
+{
+  "forge_maker": 1,
+  "defaults": {
+    "model": "minecraft:cross"
+  },
+  "variants": {
+    "age": {
+      "0": {
+        "textures": {
+          "cross": "weirdadditions:blocks/crops_cow_0"
+        }
+      },
+      "1": {
+        "textures": {
+          "cross": "weirdadditions:blocks/crops_cow_1"
+        }
+      },
+      "2": {
+        "textures": {
+          "cross": "weirdadditions:blocks/crops_cow_2"
+        }
+      },
+      "3": {
+        "textures": {
+          "cross": "weirdadditions:blocks/crops_cow_3"
+        }
+      },
+      "4": {
+        "textures": {
+          "cross": "weirdadditions:blocks/crops_cow_4"
+        }
+      }
+    }
+  }
+}

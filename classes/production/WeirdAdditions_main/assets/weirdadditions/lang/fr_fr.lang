@@ -2,6 +2,6 @@
 itemGroup.wa.name=Weird Additions
 
 # Items
-item.sporeExtractor.name=Extracteur de spore
+item.spore_extractor.name=Extracteur de spore
 item.slrf.name=Chair un petit peu moins putrifiée
 item.elrf.name=Chair encore moins putrifiée
