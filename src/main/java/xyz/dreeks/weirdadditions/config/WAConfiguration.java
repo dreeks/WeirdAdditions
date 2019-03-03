@@ -20,7 +20,7 @@ public class WAConfiguration {
         config = new Configuration(fpie.getSuggestedConfigurationFile());
         config.load();
 
-        SPOREEXTRACTOR_MAX_DAMAGE = config.get("Items", "SPORE_EXTRACTOR_MAX_USE", "20").getInt();
+        SPOREEXTRACTOR_MAX_DAMAGE = config.get("Items", "SPORE_EXTRACTOR_MAX_USE", "30").getInt();
         SPOREEXTRACTOR_LUCK = config.get("Items", "SPORE_EXTRACTOR_LUCK", "3").getInt();
 
         SLRF_FEED_AMOUNT = config.get("Food", "SLRF_FEED_AMOUNT", "2").getInt();
