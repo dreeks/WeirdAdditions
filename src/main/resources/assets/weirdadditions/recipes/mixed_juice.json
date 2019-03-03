@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+      "AAA",
+      " B "
+  ],
+  "key": {
+    "A": {
+      "item": "weirdadditions:food_mixture"
+    },
+    "B": {
+      "item": "minecraft:glass_bottle"
+    }
+  },
+  "result": {
+    "item": "weirdadditions:mixed_juice"
+  }
+}
