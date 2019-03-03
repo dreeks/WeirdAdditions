@@ -5,3 +5,10 @@ itemGroup.wa.name=Weird Additions
 item.spore_extractor.name=Extracteur de spore
 item.slrf.name=Chair un petit peu moins putrifiée
 item.elrf.name=Chair encore moins putrifiée
+
+item.recordmii.name=Music Disc
+item.record.recordmii.desc=Nintendo - Mii Channel
+item.recordhomebrew.name=Music Disc
+item.record.recordhomebrew.desc=drmr - Wii Homebrew Channel
+item.recordchiracsamba.name=Music Disc
+item.record.recordchiracsamba.desc=Jacques chirac feat Malto - Samba remix

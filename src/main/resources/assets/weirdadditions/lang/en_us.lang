@@ -5,3 +5,10 @@ itemGroup.wa.name=Weird Additions
 item.spore_extractor.name=Spore extractor
 item.slrf.name=Slightly less rotten flesh
 item.elrf.name=Even less rotten flesh
+
+item.recordmii.name=Music Disc
+item.record.recordmii.desc=Nintendo - Mii Channel
+item.recordhomebrew.name=Music Disc
+item.record.recordhomebrew.desc=drmr - Wii Homebrew Channel
+item.recordchiracsamba.name=Music Disc
+item.record.recordchiracsamba.desc=Jacques chirac feat Malto - Samba remix
