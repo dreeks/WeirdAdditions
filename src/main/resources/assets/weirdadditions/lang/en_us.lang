@@ -3,6 +3,8 @@ itemGroup.wa.name=Weird Additions
 
 # Items
 item.spore_extractor.name=Spore extractor
+item.spore_cow.name=Cow spore
+item.spore_fish.name=Fish spore
 item.slrf.name=Slightly less rotten flesh
 item.elrf.name=Even less rotten flesh
 

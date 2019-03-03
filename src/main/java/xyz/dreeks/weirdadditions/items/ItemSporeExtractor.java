@@ -2,6 +2,7 @@ package xyz.dreeks.weirdadditions.items;
 
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.passive.EntityCow;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemShears;
@@ -28,7 +29,8 @@ public class ItemSporeExtractor extends ItemBase {
             int i = rand.nextInt(WeirdAdditions.config.SPOREEXTRACTOR_LUCK);
 
             if (i == 0) {
-                System.out.println("LUCK");
+                EntityItem ei = new EntityItem(target.world, target.posX, target.posY, target.posZ, new ItemStack(WAItems.sporeCow));
+                target.world.spawnEntity(ei);
             }
 
             if (stack.getItemDamage() < WeirdAdditions.config.SPOREEXTRACTOR_MAX_DAMAGE) {
