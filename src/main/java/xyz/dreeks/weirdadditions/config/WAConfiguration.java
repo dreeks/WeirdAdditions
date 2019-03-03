@@ -7,7 +7,7 @@ public class WAConfiguration {
 
     private Configuration config;
 
-    public int SPOREEXTRACTOR_MAX_DAMAGE;
+    public int SPOREEXTRACTOR_MAX_DAMAGE, SPOREEXTRACTOR_LUCK;
 
     public int SLRF_FEED_AMOUNT, ELRF_FEED_AMOUNT;
     public float SLRF_FEED_SATURATION, ELRF_FEED_SATURATION;
@@ -19,7 +19,8 @@ public class WAConfiguration {
         /**
          * Adding config here
          */
-        SPOREEXTRACTOR_MAX_DAMAGE = config.get("Items", "SPORE_EXTRACTOR_MAX_DAMAGE", "255").getInt();
+        SPOREEXTRACTOR_MAX_DAMAGE = config.get("Items", "SPORE_EXTRACTOR_MAX_USE", "20").getInt();
+        SPOREEXTRACTOR_LUCK       = config.get("Items", "SPORE_EXTRACTOR_LUCK", "3").getInt();
 
         SLRF_FEED_AMOUNT = config.get("Food", "SLRF_FEED_AMOUNT", "2").getInt();
         SLRF_FEED_SATURATION = (float) config.get("Food", "SLRF_SATURATION_AMOUNT", "0.8").getDouble();
