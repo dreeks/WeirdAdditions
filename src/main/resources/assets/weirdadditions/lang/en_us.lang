@@ -7,6 +7,8 @@ item.spore_cow.name=Cow spore
 item.spore_fish.name=Fish spore
 item.slrf.name=Slightly less rotten flesh
 item.elrf.name=Even less rotten flesh
+item.food_mixture.name=Sweet food mixture
+item.mixed_juice.name=Mixed juice
 
 item.recordmii.name=Music Disc
 item.record.recordmii.desc=Nintendo - Mii Channel
