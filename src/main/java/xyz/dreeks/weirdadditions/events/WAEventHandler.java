@@ -61,7 +61,9 @@ public class WAEventHandler {
         }
 
         for (Block b : WABlocks.blocks) {
-            ModelLoader.setCustomModelResourceLocation(new ItemBlock(b), 0, new ModelResourceLocation(b.getRegistryName().getResourcePath()));
+            ItemBlock item = new ItemBlock(b);
+            ModelResourceLocation model = new ModelResourceLocation(b.getRegistryName().getResourcePath(), "age=0");
+            ModelLoader.setCustomModelResourceLocation(item, 0, model);
         }
     }
 
