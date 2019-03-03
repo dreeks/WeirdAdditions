@@ -12,7 +12,6 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.registries.IForgeRegistry;
-import xyz.dreeks.weirdadditions.blocks.BlockBase;
 import xyz.dreeks.weirdadditions.blocks.IHasItem;
 import xyz.dreeks.weirdadditions.blocks.WABlocks;
 import xyz.dreeks.weirdadditions.items.WAItems;
@@ -57,5 +56,4 @@ public class WAEventHandler {
             ModelLoader.setCustomModelResourceLocation(b, 0, new ModelResourceLocation(b.getRegistryName(), "inventory"));
         }*/
     }
-
 }

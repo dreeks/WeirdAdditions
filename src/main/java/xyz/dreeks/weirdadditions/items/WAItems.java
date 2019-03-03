@@ -17,6 +17,7 @@ public class WAItems {
     public static ItemSporeExtractor sporeExtractor;
     public static ItemSlightlyLessRottenFlesh slightlyLessRottenFlesh;
     public static ItemEvenLessRottenFlesh evenLessRottenFlesh;
+    public static ItemRecordHomebrew recordHomebrew;
 
     public static void preInit(FMLPreInitializationEvent fpie) {
         /**
@@ -27,6 +28,7 @@ public class WAItems {
         items.add(evenLessRottenFlesh = new ItemEvenLessRottenFlesh());
         items.add(sporeCow = new ItemBaseSeeds("spore_cow", WABlocks.cowCrops, Blocks.FARMLAND));
         items.add(sporeFish = new ItemBaseSeeds("spore_fish", WABlocks.cowCrops, Blocks.FARMLAND));
+        items.add(recordHomebrew = new ItemRecordHomebrew());
     }
 
 }

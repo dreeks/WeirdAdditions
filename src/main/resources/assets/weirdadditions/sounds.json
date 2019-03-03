@@ -1,0 +1,11 @@
+{
+  "recordhomebrew": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "weirdadditions:music/recordhomebrew",
+        "stream": true
+      }
+    ]
+  }
+}
