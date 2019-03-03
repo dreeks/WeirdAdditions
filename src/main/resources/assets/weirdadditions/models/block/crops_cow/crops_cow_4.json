@@ -1,10 +1,10 @@
 {
   "textures": {
     "crops_cow_leg": "weirdadditions:blocks/crops_cow/crops_cow_leg",
-    "crops_cow_body_right": "weirdadditions:blocks/crops_cow/crops_cow_body_right",
-    "crops_cow_body_left": "weirdadditions:blocks/crops_cow/crops_cow_body_left",
-    "crops_cow_body_top": "weirdadditions:blocks/crops_cow/crops_cow_body_top",
-    "crops_cow_body_bot": "weirdadditions:blocks/crops_cow/crops_cow_body_bot",
+    "crops_cow_body_right": "weirdadditions:blocks/crops_cow/crops_cow_body_bloody_right",
+    "crops_cow_body_left": "weirdadditions:blocks/crops_cow/crops_cow_body_bloody_left",
+    "crops_cow_body_top": "weirdadditions:blocks/crops_cow/crops_cow_body_bloody_top",
+    "crops_cow_body_bot": "weirdadditions:blocks/crops_cow/crops_cow_body_bloody_bot",
     "crops_cow_head": "weirdadditions:blocks/crops_cow/crops_cow_head",
     "crops_cow_horn": "weirdadditions:blocks/crops_cow/crops_cow_horn"
   },
