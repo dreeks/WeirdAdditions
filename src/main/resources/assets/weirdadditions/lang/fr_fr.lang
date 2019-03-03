@@ -7,6 +7,8 @@ item.spore_cow.name=Spore de vache
 item.spore_fish.name=Spore de poisson
 item.slrf.name=Chair un petit peu moins putrifiée
 item.elrf.name=Chair encore moins putrifiée
+item.food_mixture.name=Mixture délicieuse
+item.mixed_juice.name=Concentré de nourriture
 
 item.recordmii.name=Music Disc
 item.record.recordmii.desc=Nintendo - Mii Channel
