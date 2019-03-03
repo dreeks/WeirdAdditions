@@ -7,5 +7,23 @@
         "stream": true
       }
     ]
+  },
+  "recordmii": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "weirdadditions:music/recordmii",
+        "stream": true
+      }
+    ]
+  },
+  "recordchiracsamba": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "weirdadditions:music/recordchiracsamba",
+        "stream": true
+      }
+    ]
   }
 }
