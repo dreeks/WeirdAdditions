@@ -3,9 +3,12 @@
 ## Feature
     - Plantable & growable fish
     - Plantable & growable cow
-    - Food in a bottle
+    - Nursing bottle refillable
     - New vinyls (Wii mii music & Homebrew Channel music)
     - Cookable rotten flesh
+    
+## How to use it ?
+Just check out the Github's wiki on the top bar. We'll soon be releasing it on our website
 
 ## Why ?
 We were playing on our own modpack when we got this stupid idea, planting fish & cows. So we decided to make it.
