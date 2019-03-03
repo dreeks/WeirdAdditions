@@ -16,6 +16,7 @@ import xyz.dreeks.weirdadditions.items.WAItems;
 import xyz.dreeks.weirdadditions.proxy.IProxy;
 import xyz.dreeks.weirdadditions.utils.Constants;
 import xyz.dreeks.weirdadditions.utils.WACreativeTab;
+import xyz.dreeks.weirdadditions.utils.WASounds;
 
 @Mod(modid = Constants.MOD_ID, name = Constants.MOD_NAME, version = Constants.MOD_VERS)
 public class WeirdAdditions {
@@ -41,6 +42,7 @@ public class WeirdAdditions {
 
         WeirdAdditions.config = new WAConfiguration(event);
 
+        WASounds.preInit(event);
         WAItems.preInit(event);
         WABlocks.preInit(event);
 

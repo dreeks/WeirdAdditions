@@ -13,6 +13,8 @@ public class WAItems {
     public static ItemSlightlyLessRottenFlesh slightlyLessRottenFlesh;
     public static ItemEvenLessRottenFlesh evenLessRottenFlesh;
     public static ItemRecordHomebrew recordHomebrew;
+    public static ItemRecordMii recordMii;
+    public static ItemRecordChiracSamba recordChiracSamba;
 
     public static void preInit(FMLPreInitializationEvent fpie) {
         /**
@@ -22,6 +24,8 @@ public class WAItems {
         items.add(slightlyLessRottenFlesh = new ItemSlightlyLessRottenFlesh());
         items.add(evenLessRottenFlesh = new ItemEvenLessRottenFlesh());
         items.add(recordHomebrew = new ItemRecordHomebrew());
+        items.add(recordMii = new ItemRecordMii());
+        items.add(recordChiracSamba = new ItemRecordChiracSamba());
     }
 
 }
