@@ -2,6 +2,7 @@ package xyz.dreeks.weirdadditions.events;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.item.ItemBlock;
@@ -61,8 +62,13 @@ public class WAEventHandler {
         }
 
         for (Block b : WABlocks.blocks) {
-            ItemBlock item = new ItemBlock(b);
-            ModelResourceLocation model = new ModelResourceLocation(b.getRegistryName().getResourcePath(), "age=0");
+            Item item = Item.getItemFromBlock(b);
+
+            if (item == Items.AIR) {
+                continue;
+            }
+
+            ModelResourceLocation model = new ModelResourceLocation(item.getRegistryName(), "inventory");
             ModelLoader.setCustomModelResourceLocation(item, 0, model);
         }
     }
