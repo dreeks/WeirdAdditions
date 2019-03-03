@@ -11,12 +11,6 @@ public class WABlocks {
     public static BlockCropsCow cowCrops;
 
     public static void preInit(FMLPreInitializationEvent fpie) {
-        /**
-         * Adding blocks here
-         */
-
         blocks.add(cowCrops = new BlockCropsCow());
-
     }
-
 }

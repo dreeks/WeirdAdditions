@@ -13,7 +13,6 @@ import xyz.dreeks.weirdadditions.WeirdAdditions;
 import java.util.Random;
 
 public class BlockBaseCrop extends BlockCrops {
-
     public static final PropertyInteger CROP_AGE = PropertyInteger.create("age", 0, 4);
 
     public BlockBaseCrop(String name) {
@@ -46,5 +45,4 @@ public class BlockBaseCrop extends BlockCrops {
     protected BlockStateContainer createBlockState() {
         return new BlockStateContainer(this, new IProperty[]{CROP_AGE});
     }
-
 }

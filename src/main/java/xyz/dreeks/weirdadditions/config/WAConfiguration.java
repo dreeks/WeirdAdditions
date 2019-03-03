@@ -31,5 +31,4 @@ public class WAConfiguration {
         if (config.hasChanged())
             config.save();
     }
-
 }

@@ -54,9 +54,9 @@ public class WAEventHandler {
             ModelLoader.setCustomModelResourceLocation(i, 0, new ModelResourceLocation(i.getRegistryName(), "inventory"));
         }
 
-        /*for (Block b : WABlocks.blocks) {
-            ModelLoader.setCustomModelResourceLocation(b, 0, new ModelResourceLocation(b.getRegistryName(), "inventory"));
-        }*/
+        for (Block b : WABlocks.blocks) {
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(b), 0, new ModelResourceLocation(b.getRegistryName(), "inventory"));
+        }
     }
 
     @SubscribeEvent
