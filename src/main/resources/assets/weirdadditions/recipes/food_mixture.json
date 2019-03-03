@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:carrot"
+    },
+    {
+      "item": "minecraft:apple"
+    },
+    {
+      "item": "minecraft:potato"
+    },
+    {
+      "item": "minecraft:beef"
+    },
+    {
+      "item": "weirdadditions:elrf"
+    },
+    {
+      "item": "minecraft:beetroot"
+    },
+    {
+      "item": "minecraft:dye",
+      "data": 3
+    },
+    {
+      "item": "minecraft:fish",
+      "data": 32767
+    },
+    {
+      "item": "minecraft:speckled_melon"
+    }
+  ],
+  "result": {
+    "item": "weirdadditions:food_mixture"
+  }
+}
