@@ -1,6 +1,108 @@
 {
-  "parent": "block/crop",
   "textures": {
-    "crop": "weirdadditions:blocks/crops_cow/crops_cow_2"
-  }
+    "crops_cow_leg": "weirdadditions:blocks/crops_cow/crops_cow_leg",
+    "crops_cow_body_right": "weirdadditions:blocks/crops_cow/crops_cow_body_right",
+    "crops_cow_body_left": "weirdadditions:blocks/crops_cow/crops_cow_body_left",
+    "crops_cow_body_top": "weirdadditions:blocks/crops_cow/crops_cow_body_top",
+    "crops_cow_body_bot": "weirdadditions:blocks/crops_cow/crops_cow_body_bot"
+  },
+  "elements": [
+    {
+      "name": "leg_br",
+      "from": [ 3, 0, 1 ],
+      "to": [ 5, 13, 3 ],
+      "faces": {
+        "north": { "texture": "#crops_cow_leg", "uv": [ 0, 0, 2, 13 ] },
+        "east": { "texture": "#crops_cow_leg", "uv": [ 0, 0, 2, 13 ] },
+        "south": { "texture": "#crops_cow_leg", "uv": [ 0, 0, 2, 13 ] },
+        "west": { "texture": "#crops_cow_leg", "uv": [ 0, 0, 2, 13 ] },
+        "up": { "texture": "#crops_cow_leg", "uv": [ 2, 0, 4, 2 ] },
+        "down": { "texture": "#crops_cow_leg", "uv": [ 2, 0, 4, 2 ] }
+      }
+    },
+    {
+      "name": "leg_bl",
+      "from": [ 11, 0, 1 ],
+      "to": [ 13, 13, 3 ],
+      "faces": {
+        "north": { "texture": "#crops_cow_leg", "uv": [ 0, 0, 2, 13 ] },
+        "east": { "texture": "#crops_cow_leg", "uv": [ 0, 0, 2, 13 ] },
+        "south": { "texture": "#crops_cow_leg", "uv": [ 0, 0, 2, 13 ] },
+        "west": { "texture": "#crops_cow_leg", "uv": [ 0, 0, 2, 13 ] },
+        "up": { "texture": "#crops_cow_leg", "uv": [ 2, 0, 4, 2 ] },
+        "down": { "texture": "#crops_cow_leg", "uv": [ 2, 0, 4, 2 ] }
+      }
+    },
+    {
+      "name": "leg_fr",
+      "from": [ 3, 0, 14 ],
+      "to": [ 5, 13, 16 ],
+      "faces": {
+        "north": { "texture": "#crops_cow_leg", "uv": [ 0, 0, 2, 13 ] },
+        "east": { "texture": "#crops_cow_leg", "uv": [ 0, 0, 2, 13 ] },
+        "south": { "texture": "#crops_cow_leg", "uv": [ 0, 0, 2, 13 ] },
+        "west": { "texture": "#crops_cow_leg", "uv": [ 0, 0, 2, 13 ] },
+        "up": { "texture": "#crops_cow_leg", "uv": [ 2, 0, 4, 2 ] },
+        "down": { "texture": "#crops_cow_leg", "uv": [ 2, 0, 4, 2 ] }
+      }
+    },
+    {
+      "name": "leg_fl",
+      "from": [ 11, 0, 14 ],
+      "to": [ 13, 13, 16 ],
+      "faces": {
+        "north": { "texture": "#crops_cow_leg", "uv": [ 0, 0, 2, 13 ] },
+        "east": { "texture": "#crops_cow_leg", "uv": [ 0, 0, 2, 13 ] },
+        "south": { "texture": "#crops_cow_leg", "uv": [ 0, 0, 2, 13 ] },
+        "west": { "texture": "#crops_cow_leg", "uv": [ 0, 0, 2, 13 ] },
+        "up": { "texture": "#crops_cow_leg", "uv": [ 2, 0, 4, 2 ] },
+        "down": { "texture": "#crops_cow_leg", "uv": [ 2, 0, 4, 2 ] }
+      }
+    },
+    {
+      "name": "body",
+      "from": [ 3, 13, 0 ],
+      "to": [ 13, 21, 16 ],
+      "faces": {
+        "north": { "texture": "#crops_cow_body_left", "uv": [ 0, 0, 10, 8 ] },
+        "east": { "texture": "#crops_cow_body_left", "uv": [ 0, 8, 16, 16 ] },
+        "south": { "texture": "#crops_cow_body_left", "uv": [ 0, 0, 10, 8 ] },
+        "west": { "texture": "#crops_cow_body_right", "uv": [ 0, 8, 16, 16 ] },
+        "up": { "texture": "#crops_cow_body_top", "uv": [ 0, 0, 10, 16 ] },
+        "down": { "texture": "#crops_cow_body_bot", "uv": [ 0, 0, 10, 16 ] }
+      }
+    },
+    {
+      "name": "body_right",
+      "from": [ 3, 13, 0 ],
+      "to": [ 3, 21, 16 ],
+      "faces": {
+        "east": { "texture": "#crops_cow_body_left", "uv": [ 0, 8, 16, 16 ] }
+      }
+    },
+    {
+      "name": "body_left",
+      "from": [ 13, 13, 0 ],
+      "to": [ 13, 21, 16 ],
+      "faces": {
+        "west": { "texture": "#crops_cow_body_right", "uv": [ 0, 8, 16, 16 ] }
+      }
+    },
+    {
+      "name": "body_up",
+      "from": [ 13, 21, 16 ],
+      "to": [ 3, 21, 0 ],
+      "faces": {
+        "down": { "texture": "#crops_cow_body_top", "uv": [ 0, 0, 10, 16 ] }
+      }
+    },
+    {
+      "name": "body_down",
+      "from": [ 13, 13, 16 ],
+      "to": [ 3, 13, 0 ],
+      "faces": {
+        "up": { "texture": "#crops_cow_body_bot", "uv": [ 0, 0, 10, 16 ] }
+      }
+    }
+  ]
 }

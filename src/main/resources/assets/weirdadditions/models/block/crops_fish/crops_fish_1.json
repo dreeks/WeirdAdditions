@@ -1,0 +1,20 @@
+{
+  "textures": {
+    "fish": "weirdadditions:blocks/crops_fish/crops_fish_bones"
+  },
+  "elements": [
+    {
+      "name": "brochette",
+      "from": [ 7.5, 0, 7.5 ],
+      "to": [ 8.5, 16, 8.5 ],
+      "faces": {
+        "north": { "texture": "#fish", "uv": [ 0, 0, 1, 16 ] },
+        "east": { "texture": "#fish", "uv": [ 0, 0, 1, 16 ] },
+        "south": { "texture": "#fish", "uv": [ 0, 0, 1, 16 ] },
+        "west": { "texture": "#fish", "uv": [ 0, 0, 1, 16 ] },
+        "up": { "texture": "#fish", "uv": [ 1, 0, 2, 1 ] },
+        "down": { "texture": "#fish", "uv": [ 1, 0, 2, 1 ] }
+      }
+    }
+  ]
+}
