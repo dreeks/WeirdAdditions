@@ -5,11 +5,13 @@ import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import xyz.dreeks.weirdadditions.WeirdAdditions;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class BlockBaseCrop extends BlockCrops {
@@ -41,6 +43,11 @@ public class BlockBaseCrop extends BlockCrops {
     public boolean canBlockStay(World worldIn, BlockPos pos, IBlockState state)
     {
         return (worldIn.getLight(pos) >= 8 || worldIn.canSeeSky(pos)) && this.canSustainBush(worldIn.getBlockState(pos.down()));
+    }
+
+    @Override
+    public void getDrops(net.minecraft.util.NonNullList<ItemStack> drops, net.minecraft.world.IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
+        drops.add(new ItemStack(this.getSeed(), 1, 0));
     }
 
     protected int getBonemealAgeIncrease(World worldIn) {

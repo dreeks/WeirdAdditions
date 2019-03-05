@@ -1,0 +1,9 @@
+{
+  "type": "weirdadditions:spore",
+  "ingredients": [
+    "weirdadditions:spore_extractor"
+  ],
+  "result": {
+    "item": "weirdadditions:spore_extractor_fish"
+  }
+}
