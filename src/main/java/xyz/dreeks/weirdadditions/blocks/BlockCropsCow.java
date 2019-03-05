@@ -66,7 +66,7 @@ public class BlockCropsCow extends BlockBaseCrop {
                 w.spawnEntity(ec);
 
                 // Resetting the block
-                w.setBlockState(pos, WABlocks.cowCrops.getDefaultState());
+                w.setBlockToAir(pos);
 
             }
         }

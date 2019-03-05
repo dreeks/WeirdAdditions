@@ -38,6 +38,11 @@ public class BlockBaseCrop extends BlockCrops {
         }
     }
 
+    public boolean canBlockStay(World worldIn, BlockPos pos, IBlockState state)
+    {
+        return (worldIn.getLight(pos) >= 8 || worldIn.canSeeSky(pos)) && this.canSustainBush(worldIn.getBlockState(pos.down()));
+    }
+
     protected int getBonemealAgeIncrease(World worldIn) {
         return MathHelper.getInt(worldIn.rand, 1, 3);
     }
