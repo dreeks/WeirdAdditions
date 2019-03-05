@@ -31,11 +31,11 @@ public class BlockBaseCrop extends BlockCrops {
     }
 
     public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
-        /*if (rand.nextInt(3) == 0) {
+        if (rand.nextInt(3) == 0) {
             this.checkAndDropBlock(worldIn, pos, state);
         } else {
             super.updateTick(worldIn, pos, state, rand);
-        }*/
+        }
     }
 
     protected int getBonemealAgeIncrease(World worldIn) {
