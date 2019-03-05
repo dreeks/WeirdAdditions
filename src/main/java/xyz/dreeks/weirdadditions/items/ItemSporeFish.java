@@ -6,14 +6,14 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.common.EnumPlantType;
 import xyz.dreeks.weirdadditions.blocks.WABlocks;
 
-public class ItemSporeCow extends ItemBaseSeeds{
-    public ItemSporeCow() {
-        super("spore_cow", WABlocks.cowCrops);
+public class ItemSporeFish extends ItemBaseSeeds{
+    public ItemSporeFish() {
+        super("spore_fish", WABlocks.cowCrops);
     }
 
     @Override
     public IBlockState getPlant(IBlockAccess world, BlockPos pos) {
-        return WABlocks.cowCrops.getDefaultState();
+        return WABlocks.fishCrops.getDefaultState();
     }
 
     @Override

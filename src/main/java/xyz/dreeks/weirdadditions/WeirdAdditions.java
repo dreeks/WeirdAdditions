@@ -12,7 +12,6 @@ import xyz.dreeks.weirdadditions.blocks.WABlocks;
 import xyz.dreeks.weirdadditions.config.WAConfiguration;
 import xyz.dreeks.weirdadditions.events.WAEventHandler;
 import xyz.dreeks.weirdadditions.items.WAItems;
-import xyz.dreeks.weirdadditions.network.WANetwork;
 import xyz.dreeks.weirdadditions.proxy.IProxy;
 import xyz.dreeks.weirdadditions.utils.Constants;
 import xyz.dreeks.weirdadditions.utils.WACreativeTab;
