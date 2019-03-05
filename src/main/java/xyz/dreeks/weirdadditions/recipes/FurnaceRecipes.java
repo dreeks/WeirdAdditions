@@ -1,4 +1,4 @@
-package xyz.dreeks.weirdadditions;
+package xyz.dreeks.weirdadditions.recipes;
 
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
