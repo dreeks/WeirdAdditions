@@ -1,9 +1,16 @@
 {
   "type": "weirdadditions:spore",
   "ingredients": [
-    "weirdadditions:spore_extractor"
+    {
+      "item": "weirdadditions:spore_extractor",
+      "data": 32767
+    },
+    {
+      "item": "minecraft:fish",
+      "data": 32767
+    }
   ],
   "result": {
-    "item": "weirdadditions:spore_extractor_fish"
+    "item": "weirdadditions:spore_fish"
   }
 }
