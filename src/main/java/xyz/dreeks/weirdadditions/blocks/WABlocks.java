@@ -9,8 +9,10 @@ public class WABlocks {
     public static ArrayList<Block> blocks = new ArrayList<>();
 
     public static BlockCropsCow cowCrops;
+    public static BlockCropsFish fishCrops;
 
     public static void preInit(FMLPreInitializationEvent fpie) {
         blocks.add(cowCrops = new BlockCropsCow());
+        blocks.add(fishCrops = new BlockCropsFish());
     }
 }

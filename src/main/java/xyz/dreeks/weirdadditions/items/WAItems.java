@@ -16,6 +16,7 @@ public class WAItems {
     public static ItemRecordChiracSamba recordChiracSamba;
     public static ItemSporeExtractor sporeExtractor;
     public static ItemSporeCow sporeCow;
+    public static ItemSporeFish sporeFish;
     public static ItemBase foodMixture;
     public static ItemMixedJuice mixedJuice;
 
@@ -27,6 +28,7 @@ public class WAItems {
         items.add(recordChiracSamba = new ItemRecordChiracSamba());
         items.add(sporeExtractor = new ItemSporeExtractor());
         items.add(sporeCow = new ItemSporeCow());
+        items.add(sporeFish = new ItemSporeFish());
         items.add(foodMixture = new ItemBase("food_mixture"));
         items.add(mixedJuice = new ItemMixedJuice());
     }

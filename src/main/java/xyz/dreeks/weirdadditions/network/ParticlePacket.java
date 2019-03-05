@@ -29,6 +29,7 @@ public class ParticlePacket implements IMessage {
         this.y = y;
         this.z = z;
         this.messageValid = true;
+        this.quantity = 1;
     }
 
     public ParticlePacket setQuantity(int i) {
