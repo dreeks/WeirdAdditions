@@ -1,0 +1,84 @@
+{
+  "textures": {
+    "fish": "weirdadditions:blocks/crops_fish/crops_fish_flesh"
+  },
+  "display": {
+    "gui": {
+      "rotation": [ 30, 45, 0 ],
+      "translation": [ 0, 0, 0 ],
+      "scale": [ 0.625, 0.625, 0.625 ]
+    },
+    "ground": {
+      "rotation": [ 0, 0, 0 ],
+      "translation": [ 0, 3, 0 ],
+      "scale": [ 0.25, 0.25, 0.25 ]
+    },
+    "fixed": {
+      "rotation": [ 0, 180, 0 ],
+      "translation": [ 0, 0, 0 ],
+      "scale": [ 1, 1, 1 ]
+    },
+    "head": {
+      "rotation": [ 0, 180, 0 ],
+      "translation": [ 0, 0, 0 ],
+      "scale": [ 1, 1, 1 ]
+    },
+    "firstperson_righthand": {
+      "rotation": [ 0, 315, 0 ],
+      "translation": [ 0, 2.5, 0 ],
+      "scale": [ 0.4, 0.4, 0.4 ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [ 75, 315, 0 ],
+      "translation": [ 0, 2.5, 0 ],
+      "scale": [ 0.375, 0.375, 0.375 ]
+    }
+  },
+  "elements": [
+    {
+      "name": "body",
+      "from": [ 7, 11, 6 ],
+      "to": [ 9, 15, 9 ],
+      "faces": {
+        "north": { "texture": "#fish", "uv": [ 12, 0, 14, 4 ] },
+        "east": { "texture": "#fish", "uv": [ 2, 0, 5, 4 ] },
+        "south": { "texture": "#fish", "uv": [ 14, 3, 16, 7 ] },
+        "west": { "texture": "#fish", "uv": [ 6, 0, 9, 4 ] },
+        "up": { "texture": "#fish", "uv": [ 14, 0, 16, 3 ] }
+      }
+    },
+    {
+      "name": "tail",
+      "from": [ 8, 0, 5 ],
+      "to": [ 8, 12, 10 ],
+      "faces": {
+        "east": { "texture": "#fish", "uv": [ 1, 3, 6, 15 ] },
+        "west": { "texture": "#fish", "uv": [ 9, 3, 14, 15 ] }
+      }
+    },
+    {
+      "name": "belly",
+      "from": [ 7, 11, 9 ],
+      "to": [ 9, 14, 10 ],
+      "faces": {
+        "east": { "texture": "#fish", "uv": [ 1, 1, 2, 4 ] },
+        "south": { "texture": "#fish", "uv": [ 10, 1, 12, 4 ] },
+        "west": { "texture": "#fish", "uv": [ 1, 1, 2, 4 ] },
+        "up": { "texture": "#fish", "uv": [ 10, 1, 12, 2 ] }
+      }
+    },
+    {
+      "name": "brochette",
+      "from": [ 7.5, 0, 7.5 ],
+      "to": [ 8.5, 16, 8.5 ],
+      "faces": {
+        "north": { "texture": "#fish", "uv": [ 0, 0, 1, 16 ] },
+        "east": { "texture": "#fish", "uv": [ 0, 0, 1, 16 ] },
+        "south": { "texture": "#fish", "uv": [ 0, 0, 1, 16 ] },
+        "west": { "texture": "#fish", "uv": [ 0, 0, 1, 16 ] },
+        "up": { "texture": "#fish", "uv": [ 1, 0, 2, 1 ] },
+        "down": { "texture": "#fish", "uv": [ 1, 0, 2, 1 ] }
+      }
+    }
+  ]
+}

@@ -158,13 +158,18 @@
     },
     {
       "name": "neck",
-      "from": [ 7, 20, 16 ],
+      "from": [ 7, 21, 16 ],
       "to": [ 9, 21, 18 ],
       "faces": {
-        "east": { "texture": "#crops_cow_body_top", "uv": [ 0, 0, 2, 1 ] },
-        "west": { "texture": "#crops_cow_body_top", "uv": [ 0, 0, 2, 1 ] },
-        "up": { "texture": "#crops_cow_body_top", "uv": [ 4, 3, 6, 5 ] },
-        "down": { "texture": "#crops_cow_body_top", "uv": [ 0, 0, 2, 2 ] }
+        "up": { "texture": "#crops_cow_body_top", "uv": [ 4, 3, 6, 5 ] }
+      }
+    },
+    {
+      "name": "neck_bot",
+      "from": [ 9, 21, 18 ],
+      "to": [ 7, 21, 16 ],
+      "faces": {
+        "down": { "texture": "#crops_cow_body_top", "uv": [ 4, 3, 6, 5 ] }
       }
     },
     {
