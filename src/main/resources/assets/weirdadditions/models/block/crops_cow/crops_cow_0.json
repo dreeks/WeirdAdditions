@@ -1,6 +1,59 @@
 {
-  "parent": "block/crop",
   "textures": {
-    "crop": "weirdadditions:blocks/crops_cow/crops_cow_0"
-  }
+    "crops_cow_leg": "weirdadditions:blocks/crops_cow/crops_cow_leg"
+  },
+  "elements": [
+    {
+      "name": "leg_br",
+      "from": [ 3, 0, 1 ],
+      "to": [ 5, 2, 3 ],
+      "faces": {
+        "north": { "texture": "#crops_cow_leg", "uv": [ 0, 0, 2, 2 ] },
+        "east": { "texture": "#crops_cow_leg", "uv": [ 0, 0, 2, 2 ] },
+        "south": { "texture": "#crops_cow_leg", "uv": [ 0, 0, 2, 2 ] },
+        "west": { "texture": "#crops_cow_leg", "uv": [ 0, 0, 2, 2 ] },
+        "up": { "texture": "#crops_cow_leg", "uv": [ 2, 0, 4, 2 ] },
+        "down": { "texture": "#crops_cow_leg", "uv": [ 2, 0, 4, 2 ] }
+      }
+    },
+    {
+      "name": "leg_bl",
+      "from": [ 11, 0, 1 ],
+      "to": [ 13, 2, 3 ],
+      "faces": {
+        "north": { "texture": "#crops_cow_leg", "uv": [ 0, 0, 2, 2 ] },
+        "east": { "texture": "#crops_cow_leg", "uv": [ 0, 0, 2, 2 ] },
+        "south": { "texture": "#crops_cow_leg", "uv": [ 0, 0, 2, 2 ] },
+        "west": { "texture": "#crops_cow_leg", "uv": [ 0, 0, 2, 2 ] },
+        "up": { "texture": "#crops_cow_leg", "uv": [ 2, 0, 4, 2 ] },
+        "down": { "texture": "#crops_cow_leg", "uv": [ 2, 0, 4, 2 ] }
+      }
+    },
+    {
+      "name": "leg_fr",
+      "from": [ 3, 0, 14 ],
+      "to": [ 5, 2, 16 ],
+      "faces": {
+        "north": { "texture": "#crops_cow_leg", "uv": [ 0, 0, 2, 2 ] },
+        "east": { "texture": "#crops_cow_leg", "uv": [ 0, 0, 2, 2 ] },
+        "south": { "texture": "#crops_cow_leg", "uv": [ 0, 0, 2, 2 ] },
+        "west": { "texture": "#crops_cow_leg", "uv": [ 0, 0, 2, 2 ] },
+        "up": { "texture": "#crops_cow_leg", "uv": [ 2, 0, 4, 2 ] },
+        "down": { "texture": "#crops_cow_leg", "uv": [ 2, 0, 4, 2 ] }
+      }
+    },
+    {
+      "name": "leg_fl",
+      "from": [ 11, 0, 14 ],
+      "to": [ 13, 2, 16 ],
+      "faces": {
+        "north": { "texture": "#crops_cow_leg", "uv": [ 0, 0, 2, 2 ] },
+        "east": { "texture": "#crops_cow_leg", "uv": [ 0, 0, 2, 2 ] },
+        "south": { "texture": "#crops_cow_leg", "uv": [ 0, 0, 2, 2 ] },
+        "west": { "texture": "#crops_cow_leg", "uv": [ 0, 0, 2, 2 ] },
+        "up": { "texture": "#crops_cow_leg", "uv": [ 2, 0, 4, 2 ] },
+        "down": { "texture": "#crops_cow_leg", "uv": [ 2, 0, 4, 2 ] }
+      }
+    }
+  ]
 }
