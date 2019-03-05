@@ -166,6 +166,38 @@
         "up": { "texture": "#crops_cow_body_top", "uv": [ 4, 3, 6, 5 ] },
         "down": { "texture": "#crops_cow_body_top", "uv": [ 0, 0, 2, 2 ] }
       }
+    },
+    {
+      "name": "body_right",
+      "from": [ 3, 13, 0 ],
+      "to": [ 3, 21, 16 ],
+      "faces": {
+        "east": { "texture": "#crops_cow_body_left", "uv": [ 0, 8, 16, 16 ] }
+      }
+    },
+    {
+      "name": "body_left",
+      "from": [ 13, 13, 0 ],
+      "to": [ 13, 21, 16 ],
+      "faces": {
+        "west": { "texture": "#crops_cow_body_right", "uv": [ 0, 8, 16, 16 ] }
+      }
+    },
+    {
+      "name": "body_up",
+      "from": [ 13, 21, 16 ],
+      "to": [ 3, 21, 0 ],
+      "faces": {
+        "down": { "texture": "#crops_cow_body_top", "uv": [ 0, 0, 10, 16 ] }
+      }
+    },
+    {
+      "name": "body_down",
+      "from": [ 13, 13, 16 ],
+      "to": [ 3, 13, 0 ],
+      "faces": {
+        "up": { "texture": "#crops_cow_body_bot", "uv": [ 0, 0, 10, 16 ] }
+      }
     }
   ]
 }
