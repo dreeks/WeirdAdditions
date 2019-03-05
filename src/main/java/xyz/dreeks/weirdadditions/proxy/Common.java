@@ -17,6 +17,11 @@ public class Common implements IProxy {
     }
 
     @Override
+    public void registerNetwork() {
+
+    }
+
+    @Override
     public boolean isClient() {
         return false;
     }
