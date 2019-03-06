@@ -9,8 +9,10 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.Logger;
 import xyz.dreeks.weirdadditions.blocks.WABlocks;
+import xyz.dreeks.weirdadditions.capabilities.WACapabilities;
 import xyz.dreeks.weirdadditions.config.WAConfiguration;
-import xyz.dreeks.weirdadditions.events.WAEventHandler;
+import xyz.dreeks.weirdadditions.events.BlockEvents;
+import xyz.dreeks.weirdadditions.events.WAEvents;
 import xyz.dreeks.weirdadditions.items.WAItems;
 import xyz.dreeks.weirdadditions.proxy.IProxy;
 import xyz.dreeks.weirdadditions.recipes.FurnaceRecipes;
@@ -45,10 +47,10 @@ public class WeirdAdditions {
         WASounds.preInit(event);
         WAItems.preInit(event);
         WABlocks.preInit(event);
+        WACapabilities.preInit(event);
+        WAEvents.preInit(event);
 
         proxy.registerNetwork();
-
-        MinecraftForge.EVENT_BUS.register(new WAEventHandler());
     }
 
     @EventHandler

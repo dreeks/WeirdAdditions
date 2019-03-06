@@ -16,12 +16,16 @@ public class WAConfiguration {
     public float MIXED_JUICE_SATURATION;
     public boolean MIXED_JUICE_EDIBLE_WHEN_NOT_HUNGRY;
 
+    public int MAX_SPORE_PER_COW;
+
     public WAConfiguration(FMLPreInitializationEvent fpie) {
         config = new Configuration(fpie.getSuggestedConfigurationFile());
         config.load();
 
         SPOREEXTRACTOR_MAX_DAMAGE = config.get("Items", "SPORE_EXTRACTOR_MAX_USE", "30").getInt();
         SPOREEXTRACTOR_LUCK = config.get("Items", "SPORE_EXTRACTOR_LUCK", "3").getInt();
+
+        MAX_SPORE_PER_COW = config.get("Spore", "MAX_SPORE_PER_COW", "3").getInt();
 
         SLRF_FEED_AMOUNT = config.get("Food", "SLRF_FEED_AMOUNT", "2").getInt();
         SLRF_FEED_SATURATION = (float) config.get("Food", "SLRF_SATURATION_AMOUNT", "0.8").getDouble();
