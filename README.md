@@ -8,7 +8,9 @@
     - Cookable rotten flesh
     
 ## How to use it ?
-Just check out the Github's wiki on the top bar. We'll soon be releasing it on our website
+Currently you can not download it yet. If you compiled it by yourself you can find everything you need on the [mod wiki](https://github.com/dreeks/WeirdAdditions/wiki).
+
+There will soon be a website with everything related to the mod
 
 ## Why ?
 We were playing on our own modpack when we got this stupid idea, planting fish & cows. So we decided to make it.
