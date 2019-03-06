@@ -5,6 +5,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import xyz.dreeks.weirdadditions.items.WAItems;
 
 public class WACreativeTab extends CreativeTabs {
 
@@ -15,7 +16,7 @@ public class WACreativeTab extends CreativeTabs {
     @Override
     @SideOnly(Side.CLIENT)
     public ItemStack getTabIconItem() {
-        return new ItemStack(Items.CARROT_ON_A_STICK);
+        return new ItemStack(WAItems.sporeExtractor);
     }
 
 }

@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "weirdadditions",
+  "name": "WeirdAdditions",
+  "description": "Weird additions that nobody asked for!",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "",
+  "url": "https://dreeks.xyz/",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["Oxodao", "Cylgom"],
+  "credits": "Thanks for anybody involved in the modding scene. Thanks to all the mod players. That's what made Minecraft the way it is today.",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

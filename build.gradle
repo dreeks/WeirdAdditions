@@ -11,9 +11,9 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
 
-version = "0.1"
+version = "1.12.2-1.0.0-beta1"
 group = "xyz.dreeks.weirdadditions"
-archivesBaseName = "WEIRDADDITIONS"
+archivesBaseName = "WeirdAdditions"
 
 sourceCompatibility = targetCompatibility = '1.8'
 compileJava {
@@ -75,3 +75,5 @@ processResources {
         exclude 'mcmod.info'
     }
 }
+
+idea { module { inheritOutputDirs = true } }

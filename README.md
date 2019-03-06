@@ -8,7 +8,9 @@
     - Cookable rotten flesh
     
 ## How to use it ?
-Currently you can not download it yet. If you compiled it by yourself you can find everything you need on the [mod wiki](https://github.com/dreeks/WeirdAdditions/wiki).
+The first beta of the mod is available. Download it [here](https://github.com/dreeks/WeirdAdditions/releases).
+
+You can find everything you need to learn about the mod on the [wiki](https://github.com/dreeks/WeirdAdditions/wiki).
 
 There will soon be a website with everything related to the mod
 
