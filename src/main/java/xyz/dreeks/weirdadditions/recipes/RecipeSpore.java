@@ -4,6 +4,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import net.minecraft.inventory.InventoryCrafting;
+import net.minecraft.item.ItemFishFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.item.crafting.Ingredient;
@@ -17,15 +18,18 @@ import net.minecraftforge.oredict.ShapelessOreRecipe;
 import xyz.dreeks.weirdadditions.WeirdAdditions;
 import xyz.dreeks.weirdadditions.items.ItemSporeExtractor;
 
+import javax.annotation.Nonnull;
+
 class RecipeFishSpore extends ShapelessOreRecipe {
     // initialize a classic shapeless recipe
     public RecipeFishSpore(ResourceLocation group, NonNullList<Ingredient> input, ItemStack result) {
         super(group, input, result);
     }
 
-    @Override
     // give the remaining items list a special treatment to increase the spore extractor's damage
-    public NonNullList<ItemStack> getRemainingItems(InventoryCrafting inv) {
+    @Override
+    @Nonnull
+    public NonNullList<ItemStack> getRemainingItems(@Nonnull InventoryCrafting inv) {
         // get the crafting table size
         int craftingBenchSize = inv.getSizeInventory();
 
@@ -61,10 +65,44 @@ class RecipeFishSpore extends ShapelessOreRecipe {
 
         return list;
     }
+
+    @Override
+    @Nonnull
+    public ItemStack getCraftingResult(@Nonnull InventoryCrafting list) {
+        ItemStack stackOut = super.getCraftingResult(list);
+        int meta = 0;
+
+        int craftingBenchSize = list.getSizeInventory();
+        ItemStack stackIn;
+        int i = 0;
+
+        while (i < craftingBenchSize) {
+            stackIn = list.getStackInSlot(i);
+
+            if (stackIn.getItem() instanceof ItemFishFood) {
+                meta = stackIn.getMetadata();
+                break;
+            }
+
+            ++i;
+        }
+
+        // @TODO
+        // we prevent non-default fish types from returning a spore,
+        // because the SporeFish class does not support metadata yet.
+        // when other fish crops are implemented, simply remove this
+        // to enable automatic metadata transmission to the result.
+        if (meta > 0) {
+            return ItemStack.EMPTY;
+        }
+
+        return new ItemStack(stackOut.getItem(), stackOut.getCount(), meta);
+    }
 }
 
 // mostly copied from ShapelessRecipes
 public class RecipeSpore implements IRecipeFactory {
+    @Nonnull
     private static NonNullList<Ingredient> deserializeIngredients(JsonArray array) {
         NonNullList<Ingredient> ingredientsList = NonNullList.<Ingredient>create();
 
