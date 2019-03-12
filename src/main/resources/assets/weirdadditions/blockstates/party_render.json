@@ -1,0 +1,6 @@
+{
+  "forge_maker": 1,
+  "defaults": {
+    "model": "minecraft:blocks"
+  }
+}

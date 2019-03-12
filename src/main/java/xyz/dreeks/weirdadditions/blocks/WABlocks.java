@@ -10,9 +10,11 @@ public class WABlocks {
 
     public static BlockCropsCow cowCrops;
     public static BlockCropsFish fishCrops;
+    public static BlockPartyRender brf;
 
     public static void preInit(FMLPreInitializationEvent fpie) {
         blocks.add(cowCrops = new BlockCropsCow());
         blocks.add(fishCrops = new BlockCropsFish());
+        blocks.add(brf=new BlockPartyRender());
     }
 }
