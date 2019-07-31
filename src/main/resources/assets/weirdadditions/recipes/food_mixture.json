@@ -20,15 +20,14 @@
       "item": "minecraft:beetroot"
     },
     {
-      "item": "minecraft:dye",
-      "data": 3
+      "item": "minecraft:cooked_porkchop"
     },
     {
       "item": "minecraft:fish",
       "data": 32767
     },
     {
-      "item": "minecraft:speckled_melon"
+      "item": "minecraft:melon"
     }
   ],
   "result": {

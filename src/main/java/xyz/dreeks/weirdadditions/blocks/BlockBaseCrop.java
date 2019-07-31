@@ -11,7 +11,6 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import xyz.dreeks.weirdadditions.WeirdAdditions;
 
-import java.util.ArrayList;
 import java.util.Random;
 
 public class BlockBaseCrop extends BlockCrops {

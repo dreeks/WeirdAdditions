@@ -19,7 +19,7 @@ public class ItemSporeExtractor extends ItemBase {
     public ItemSporeExtractor() {
         super("spore_extractor");
         this.setMaxStackSize(1);
-        this.setMaxDamage(WeirdAdditions.instance.config.SPOREEXTRACTOR_MAX_DAMAGE);
+        this.setMaxDamage(WeirdAdditions.config.SPOREEXTRACTOR_MAX_DAMAGE);
     }
 
     public boolean itemInteractionForEntity(ItemStack stack, EntityPlayer ep, EntityLivingBase target, EnumHand hand) {
