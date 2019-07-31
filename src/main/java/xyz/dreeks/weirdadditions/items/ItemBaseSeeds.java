@@ -13,6 +13,7 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import xyz.dreeks.weirdadditions.WeirdAdditions;
+import xyz.dreeks.weirdadditions.blocks.BlockBaseCrop;
 
 public class ItemBaseSeeds extends ItemSeeds {
 
@@ -30,13 +31,14 @@ public class ItemBaseSeeds extends ItemSeeds {
     @Override
     public EnumActionResult onItemUse(EntityPlayer player, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
         IBlockState plant = getPlant(worldIn, pos);
+
         Block block = worldIn.getBlockState(pos).getBlock();
 
         if (block.canSustainPlant(plant, worldIn, pos, facing, this)
         && block.isAir(worldIn.getBlockState(pos.up()), worldIn, pos.up())) {
             ItemStack seeds = player.getHeldItem(hand);
 
-            worldIn.setBlockState(pos.up(), plant);
+            worldIn.setBlockState(pos.up(), plant.withProperty(BlockBaseCrop.FACING, player.getHorizontalFacing()));
             seeds.setCount(seeds.getCount() - 1);
 
             return EnumActionResult.SUCCESS;

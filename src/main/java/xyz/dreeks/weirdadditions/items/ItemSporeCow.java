@@ -6,7 +6,7 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.common.EnumPlantType;
 import xyz.dreeks.weirdadditions.blocks.WABlocks;
 
-public class ItemSporeCow extends ItemBaseSeeds{
+public class ItemSporeCow extends ItemBaseSeeds {
     public ItemSporeCow() {
         super("spore_cow", WABlocks.cowCrops);
     }
