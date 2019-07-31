@@ -1,6 +1,5 @@
 package xyz.dreeks.weirdadditions;
 
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -11,7 +10,6 @@ import org.apache.logging.log4j.Logger;
 import xyz.dreeks.weirdadditions.blocks.WABlocks;
 import xyz.dreeks.weirdadditions.capabilities.WACapabilities;
 import xyz.dreeks.weirdadditions.config.WAConfiguration;
-import xyz.dreeks.weirdadditions.events.BlockEvents;
 import xyz.dreeks.weirdadditions.events.WAEvents;
 import xyz.dreeks.weirdadditions.items.WAItems;
 import xyz.dreeks.weirdadditions.proxy.IProxy;

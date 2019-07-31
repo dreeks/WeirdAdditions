@@ -19,6 +19,7 @@ public class WAItems {
     public static ItemSporeFish sporeFish;
     public static ItemBase foodMixture;
     public static ItemMixedJuice mixedJuice;
+    public static ItemHalfCoal halfCoal;
 
     public static void preInit(FMLPreInitializationEvent fpie) {
         items.add(slightlyLessRottenFlesh = new ItemSlightlyLessRottenFlesh());
@@ -31,5 +32,6 @@ public class WAItems {
         items.add(sporeFish = new ItemSporeFish());
         items.add(foodMixture = new ItemBase("food_mixture"));
         items.add(mixedJuice = new ItemMixedJuice());
+        items.add(halfCoal = new ItemHalfCoal());
     }
 }
