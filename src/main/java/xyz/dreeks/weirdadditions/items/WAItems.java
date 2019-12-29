@@ -2,6 +2,7 @@ package xyz.dreeks.weirdadditions.items;
 
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import xyz.dreeks.weirdadditions.utils.Constants;
 
 import java.util.ArrayList;
 
@@ -20,6 +21,8 @@ public class WAItems {
     public static ItemBase foodMixture;
     public static ItemMixedJuice mixedJuice;
     public static ItemHalfCoal halfCoal;
+    public static ItemRotator rotator;
+    public static ItemHedgeTrimmer hedgeTrimmer;
 
     public static void preInit(FMLPreInitializationEvent fpie) {
         items.add(slightlyLessRottenFlesh = new ItemSlightlyLessRottenFlesh());
@@ -33,5 +36,10 @@ public class WAItems {
         items.add(foodMixture = new ItemBase("food_mixture"));
         items.add(mixedJuice = new ItemMixedJuice());
         items.add(halfCoal = new ItemHalfCoal());
+        items.add(hedgeTrimmer = new ItemHedgeTrimmer());
+
+        if (Constants.COMPAT_IC2) {
+            items.add(rotator = new ItemRotator());
+        }
     }
 }

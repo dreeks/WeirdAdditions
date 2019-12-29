@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+      "AAA",
+      "ABB"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:shears"
+    },
+    "B": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "weirdadditions:hedge_trimmer"
+  }
+}

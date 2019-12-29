@@ -40,6 +40,7 @@ public class WeirdAdditions {
 
         this.creativeTab = new WACreativeTab();
 
+        Constants.CheckLoadedMods();
         WeirdAdditions.config = new WAConfiguration(event);
 
         WASounds.preInit(event);
