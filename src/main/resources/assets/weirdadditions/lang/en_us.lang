@@ -19,4 +19,8 @@ item.record.recordchiracsamba.desc=Jacques chirac feat Malto - Samba remix
 
 item.half_coal.name=Half coal
 item.rotator.name=Rubber log mover
+
 item.hedge_trimmer.name=Hedge trimmer
+item.hedge_trimmer.mode.default=Mode: Default
+item.hedge_trimmer.mode.bushes=Mode: Bushes and plants
+item.hedge_trimmer.mode.leaves=Mode: Leaves

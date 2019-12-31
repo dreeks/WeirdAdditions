@@ -3,27 +3,32 @@ package xyz.dreeks.weirdadditions.items;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.resources.I18n;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.EnumActionResult;
-import net.minecraft.util.EnumHand;
-import net.minecraft.util.SoundCategory;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.common.IShearable;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
+import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 /**
  * Inspired from ActuallyAdditions
- * Just because I don't want to have mods I use for only one item in my modpack, I've implemented it in my own mod
+ * I would only use ActuallyAdditions for this item so instead of installing it, I add it to our mod which is already installed in our modpack.
+ * @TODO: Better craft. Create "blade" item and "handle" item which will be used for all our tools
  */
 public class ItemHedgeTrimmer extends ItemBase {
 
@@ -32,15 +37,50 @@ public class ItemHedgeTrimmer extends ItemBase {
         setMaxDamage(500);
     }
 
-    /**
-     *  Temporarly stolen from Ellpeck/ActuallyAdditions
-     *  Need a clean rewrite when I have time
-     */
+    protected ItemHedgeTrimmer(String name) {
+        // @TODO: This is for extending the item, for the Electric Hedge trimmer
+        super(name);
+    }
+
+    @SideOnly(Side.CLIENT)
+    public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
+        if (stack.hasTagCompound() && stack.getTagCompound().getInteger("mode") != 0) {
+            switch(stack.getTagCompound().getInteger("mode")) {
+                case 1:
+                    tooltip.add(I18n.format("item.hedge_trimmer.mode.bushes", TextFormatting.ITALIC));
+                    break;
+                case 2:
+                    tooltip.add(I18n.format("item.hedge_trimmer.mode.leaves", TextFormatting.ITALIC));
+                    break;
+            }
+        } else {
+            tooltip.add(I18n.format("item.hedge_trimmer.mode.default", TextFormatting.ITALIC));
+        }
+    }
 
     @Override
-    public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {
-        player.setActiveHand(hand);
-        return new ActionResult<>(EnumActionResult.SUCCESS, player.getHeldItem(hand));
+    public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer ep, EnumHand hand) {
+        if (!ep.isSneaking()) {
+            ep.setActiveHand(hand);
+            return new ActionResult<>(EnumActionResult.SUCCESS, ep.getHeldItem(hand));
+        }
+
+        NBTTagCompound tag = ep.getHeldItem(hand).getTagCompound();
+        if (tag == null) {
+            tag = new NBTTagCompound();
+        }
+
+        // Default to 0 :)
+        int currentMode = tag.getInteger("mode");
+        currentMode++;
+        if (currentMode > 2) {
+            currentMode = 0;
+        }
+
+        tag.setInteger("mode", currentMode);
+
+        ep.getHeldItem(hand).setTagCompound(tag);
+        return new ActionResult<>(EnumActionResult.SUCCESS, ep.getHeldItem(hand));
     }
 
     @Override
@@ -54,76 +94,71 @@ public class ItemHedgeTrimmer extends ItemBase {
     }
 
     @Override
-    public void onUsingTick(ItemStack stack, EntityLivingBase player, int time) {
-        this.doUpdate(player.world, MathHelper.floor(player.posX), MathHelper.floor(player.posY), MathHelper.floor(player.posZ), time, stack);
-    }
+    public void onUsingTick(ItemStack stack, EntityLivingBase ep, int time) {
+        int x = MathHelper.floor(ep.posX);
+        int y = MathHelper.floor(ep.posY);
+        int z = MathHelper.floor(ep.posZ);
 
-    private boolean doUpdate(World world, int x, int y, int z, int time, ItemStack stack) {
-        if (!world.isRemote) {
-            if (time <= this.getMaxItemUseDuration(stack) && stack.getItemDamage() < this.getMaxDamage(stack)) {
-                // Breaks the Blocks
-                boolean broke = this.breakStuff(world, x, y, z);
+        if (!ep.world.isRemote) {
+            if (time <= this.getMaxItemUseDuration(stack) && this.canBeUsed(stack)) {
+                ArrayList<BlockPos> blockList = new ArrayList<>();
+                for (int i = -3; i < 3; i++) {
+                    for (int j = -5; j < 5; j++) {
+                        for (int k = -3; k < 3; k++) {
+                            BlockPos bp = new BlockPos(x + i, y + j, z + k);
+                            IBlockState bs = ep.world.getBlockState(bp);
 
-                // Plays a Minecart sounds (It really sounds like a Leaf Blower!)
-                world.playSound(null, x, y, z, SoundEvents.ENTITY_MINECART_RIDING, SoundCategory.PLAYERS, 0.3F, 0.001F);
-
-                // @TODO: find a correct amount
-                if (broke) {
-                    stack.setItemDamage(stack.getItemDamage() + 1);
-                    if (stack.getItemDamage() >= stack.getMaxDamage()) {
-                        stack.setCount(0);
+                            if (this.isCorrectBlock(stack, bs.getBlock())) {
+                                blockList.add(bp);
+                            }
+                        }
                     }
                 }
 
-                return broke;
+                if (!blockList.isEmpty()) {
+                    Collections.shuffle(blockList);
+                    BlockPos bp = blockList.get(0);
+                    IBlockState bs = ep.world.getBlockState(bp);
+
+                    bs.getBlock().dropBlockAsItem(ep.world, bp, bs, 0);
+                    ep.world.playEvent(2001, bp, Block.getStateId(bs));
+                    ep.world.setBlockToAir(bp);
+
+                    this.damageItem(stack, ep);
+                }
+            }
+        }
+    }
+
+    private boolean isCorrectBlock(ItemStack is, Block b) {
+        if (b != null) {
+            boolean hasMode = is.hasTagCompound() && is.getTagCompound().hasKey("mode");
+            if (!hasMode)
+                return b instanceof BlockBush || b instanceof IShearable;
+
+            int mode = is.getTagCompound().getInteger("mode");
+            switch (mode) {
+                case 0:
+                    return b instanceof BlockBush || b instanceof IShearable;
+                case 1:
+                    return b instanceof BlockBush;
+                case 2:
+                    return !(b instanceof BlockBush) && b instanceof IShearable;
             }
         }
         return false;
     }
 
-    public boolean breakStuff(World world, int x, int y, int z) {
-        ArrayList<BlockPos> breakPositions = new ArrayList<>();
+    private boolean canBeUsed(ItemStack stack) {
+        return stack.getItemDamage() < this.getMaxDamage(stack);
+    }
 
-        int rangeSides = 5;
-        for (int reachX = -rangeSides; reachX < rangeSides + 1; reachX++) {
-            for (int reachZ = -rangeSides; reachZ < rangeSides + 1; reachZ++) {
-                for (int reachY = -rangeSides; reachY < rangeSides + 1; reachY++) {
-                    //The current Block to break
-                    BlockPos pos = new BlockPos(x + reachX, y + reachY, z + reachZ);
-                    Block block = world.getBlockState(pos).getBlock();
-
-                    if (block != null && (block instanceof BlockBush || block instanceof IShearable)) {
-                        breakPositions.add(pos);
-                    }
-                }
-            }
+    private void damageItem(ItemStack stack, EntityLivingBase ep) {
+        stack.setItemDamage(stack.getItemDamage() + 1);
+        if (stack.getItemDamage() >= stack.getMaxDamage()) {
+            stack.setCount(0);
+            ep.world.playSound(null, ep.getPosition().getX(), ep.getPosition().getY(), ep.getPosition().getZ(), SoundEvents.ENTITY_ITEM_BREAK, SoundCategory.PLAYERS, 0.7f, 0.001f);
         }
-
-        if (!breakPositions.isEmpty()) {
-            Collections.shuffle(breakPositions);
-
-            BlockPos theCoord = breakPositions.get(0);
-            IBlockState theState = world.getBlockState(theCoord);
-
-            theState.getBlock().dropBlockAsItem(world, theCoord, theState, 0);
-            //Plays the Breaking Sound
-            world.playEvent(2001, theCoord, Block.getStateId(theState));
-
-            //Deletes the Block
-            world.setBlockToAir(theCoord);
-
-            return true;
-        }
-        return false;
     }
 
-    //@Override
-    public boolean update(ItemStack stack, TileEntity tile, int elapsedTicks) {
-        return this.doUpdate(tile.getWorld(), tile.getPos().getX(), tile.getPos().getY(), tile.getPos().getZ(), elapsedTicks, stack);
-    }
-
-    //@Override
-    public int getUsePerTick(ItemStack stack, TileEntity tile, int elapsedTicks) {
-        return 60;
-    }
 }
