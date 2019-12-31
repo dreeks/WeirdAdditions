@@ -49,6 +49,7 @@ public class WeirdAdditions {
         WACapabilities.preInit(event);
         WAEvents.preInit(event);
 
+        proxy.registerRenders();
         proxy.registerNetwork();
     }
 

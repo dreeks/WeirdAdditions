@@ -21,7 +21,7 @@ public class WAItems {
     public static ItemBase foodMixture;
     public static ItemMixedJuice mixedJuice;
     public static ItemHalfCoal halfCoal;
-    public static ItemRotator rotator;
+    public static ItemLogMover rotator;
     public static ItemHedgeTrimmer hedgeTrimmer;
 
     public static void preInit(FMLPreInitializationEvent fpie) {
@@ -39,7 +39,7 @@ public class WAItems {
         items.add(hedgeTrimmer = new ItemHedgeTrimmer());
 
         if (Constants.COMPAT_IC2) {
-            items.add(rotator = new ItemRotator());
+            items.add(rotator = new ItemLogMover());
         }
     }
 }

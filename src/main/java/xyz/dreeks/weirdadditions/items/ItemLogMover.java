@@ -5,11 +5,9 @@ import net.minecraft.block.Block;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.renderer.ItemMeshDefinition;
 import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -17,7 +15,6 @@ import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
@@ -27,10 +24,10 @@ import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
 
-public class ItemRotator extends ItemBase {
+public class ItemLogMover extends ItemBase {
 
-    public ItemRotator() {
-        super("rotator");
+    public ItemLogMover() {
+        super("logmover");
         setMaxDamage(20);
     }
 
@@ -65,8 +62,8 @@ public class ItemRotator extends ItemBase {
 
             // If the player is sneaking, we rotate the cube
             if (blockRubber != null) {
-                if ((bs.getBlock() == blockRubber && tag.getBoolean("hasBlock")) || (bs.getBlock() == blockRubber && !ep.isSneaking())) {
-                    BlockRubWood.RubberWoodState rws = ItemRotator.getRWS(bs);
+                if (!ep.isSneaking() && bs.getBlock() == blockRubber) {
+                    BlockRubWood.RubberWoodState rws = ItemLogMover.getRWS(bs);
                     BlockRubWood.RubberWoodState newValue = null;
 
                     if (rws != null) {
@@ -105,10 +102,10 @@ public class ItemRotator extends ItemBase {
                 } else {
                     if (tag.getBoolean("hasBlock")) {
                         PropertyEnum<BlockRubWood.RubberWoodState> stateProperty = PropertyEnum.create("state", BlockRubWood.RubberWoodState.class);
-                        BlockRubWood.RubberWoodState rws = ItemRotator.getRWSFromString(tag.getString("state"));
+                        BlockRubWood.RubberWoodState rws = ItemLogMover.getRWSFromString(tag.getString("state"));
 
                         if (rws != null) {
-                            if (ItemRotator.placeBlock(w, facing, pos, blockRubber.getDefaultState().withProperty(stateProperty, rws))) {
+                            if (ItemLogMover.placeBlock(w, facing, pos, blockRubber.getDefaultState().withProperty(stateProperty, rws))) {
                                 tag.removeTag("state");
                                 tag.setBoolean("hasBlock", false);
                                 is.setItemDamage(is.getItemDamage() + 1);
@@ -118,14 +115,14 @@ public class ItemRotator extends ItemBase {
                             }
                         }
                     } else if (bs.getBlock() == blockRubber) {
-                        BlockRubWood.RubberWoodState rws = ItemRotator.getRWS(bs);
-                        String state = ItemRotator.getStringFromRWS(rws);
+                        BlockRubWood.RubberWoodState rws = ItemLogMover.getRWS(bs);
+                        String state = ItemLogMover.getStringFromRWS(rws);
 
                         if (state != null && !state.isEmpty()) {
                             tag.setBoolean("hasBlock", true);
                             if (rws != null) {
                                 tag.setString("state", state);
-                                ItemRotator.removeBlock(w, pos);
+                                ItemLogMover.removeBlock(w, pos);
                             }
                         }
                     }
