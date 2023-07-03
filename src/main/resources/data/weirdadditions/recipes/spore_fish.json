@@ -1,0 +1,10 @@
+{
+  "type": "weirdadditions:spore",
+  "ingredients": [
+    {"item": "weirdadditions:spore_extractor"},
+    {"item": "minecraft:cod"}
+  ],
+  "result": {
+    "item": "weirdadditions:spore_fish"
+  }
+}

@@ -1,29 +1,14 @@
 {
   "recordhomebrew": {
     "category": "record",
-    "sounds": [
-      {
-        "name": "weirdadditions:music/recordhomebrew",
-        "stream": true
-      }
-    ]
+    "sounds": [{"name": "weirdadditions:recordhomebrew", "stream": true}]
   },
   "recordmii": {
     "category": "record",
-    "sounds": [
-      {
-        "name": "weirdadditions:music/recordmii",
-        "stream": true
-      }
-    ]
+    "sounds": [{"name": "weirdadditions:recordmii", "stream": true}]
   },
   "recordchiracsamba": {
     "category": "record",
-    "sounds": [
-      {
-        "name": "weirdadditions:music/recordchiracsamba",
-        "stream": true
-      }
-    ]
+    "sounds": [{"name": "weirdadditions:recordchiracsamba", "stream": true}]
   }
 }

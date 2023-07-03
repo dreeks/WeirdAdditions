@@ -6,6 +6,7 @@
     - Nursing bottle refillable
     - New vinyls (Wii mii music & Homebrew Channel music)
     - Cookable rotten flesh
+    - Small Spikes (Deals damage until half a heart)
     
 ## How to use it ?
 The first beta of the mod is available. Download it [here](https://github.com/dreeks/WeirdAdditions/releases).
@@ -21,7 +22,7 @@ We also wanted to add other things we tried to do during the previous years of F
 
 ## Licence
     WeirdAddition (Minecraft mod)
-    Copyright (C) 2019 Team Dreeks (Nathan <Oxodao> JANCZEWSKI, Guillaume <Cylgom>)
+    Copyright (C) 2019-2023 Team Dreeks (Nathan <Oxodao> JANCZEWSKI, Guillaume <Cylgom>)
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by

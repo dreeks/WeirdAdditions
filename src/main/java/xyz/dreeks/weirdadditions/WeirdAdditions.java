@@ -1,66 +1,34 @@
 package xyz.dreeks.weirdadditions;
 
+import com.mojang.logging.LogUtils;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.Mod.EventHandler;
-import net.minecraftforge.fml.common.SidedProxy;
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import org.apache.logging.log4j.Logger;
-import xyz.dreeks.weirdadditions.blocks.WABlocks;
-import xyz.dreeks.weirdadditions.capabilities.WACapabilities;
-import xyz.dreeks.weirdadditions.config.WAConfiguration;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import org.slf4j.Logger;
+import xyz.dreeks.weirdadditions.events.CapabilitiesEvents;
 import xyz.dreeks.weirdadditions.events.WAEvents;
-import xyz.dreeks.weirdadditions.items.WAItems;
-import xyz.dreeks.weirdadditions.proxy.IProxy;
-import xyz.dreeks.weirdadditions.recipes.FurnaceRecipes;
+import xyz.dreeks.weirdadditions.setup.*;
+import xyz.dreeks.weirdadditions.utils.Config;
 import xyz.dreeks.weirdadditions.utils.Constants;
-import xyz.dreeks.weirdadditions.utils.WACreativeTab;
-import xyz.dreeks.weirdadditions.utils.WASounds;
 
-@Mod(modid = Constants.MOD_ID, name = Constants.MOD_NAME, version = Constants.MOD_VERS)
-public class WeirdAdditions {
+@Mod(Constants.MOD_ID)
+public class WeirdAdditions
+{
+    private static final Logger LOGGER = LogUtils.getLogger();
 
-    public static WAConfiguration config;
+    public WeirdAdditions() {
+        // Do not change the order of the following lines
+        SoundRegistration.init();
+        BlockRegistration.init();
+        ItemRegistration.init();
+        Config.register();
 
-    @Mod.Instance
-    public static WeirdAdditions instance;
+        IEventBus modbus = FMLJavaModLoadingContext.get().getModEventBus();
+        modbus.addListener(ModSetup::init);
+        DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> modbus.addListener(ClientSetup::init));
 
-    @SidedProxy(serverSide = Constants.SERVER_PROXY_LOCATION, clientSide = Constants.CLIENT_PROXY_LOCATION)
-    public static IProxy proxy;
-
-    private static Logger LOGGER;
-
-    public WACreativeTab creativeTab;
-
-
-    @EventHandler
-    public void preInit(FMLPreInitializationEvent event) {
-        WeirdAdditions.LOGGER = event.getModLog();
-
-        this.creativeTab = new WACreativeTab();
-
-        Constants.CheckLoadedMods();
-        WeirdAdditions.config = new WAConfiguration(event);
-
-        WASounds.preInit(event);
-        WAItems.preInit(event);
-        WABlocks.preInit(event);
-        WACapabilities.preInit(event);
-        WAEvents.preInit(event);
-
-        proxy.registerRenders();
-        proxy.registerNetwork();
-    }
-
-    @EventHandler
-    public void init(FMLInitializationEvent event) {
-        FurnaceRecipes.load();
-
-    }
-
-    @EventHandler
-    public void postInit(FMLPostInitializationEvent evt) {
-
+        WAEvents.preInit();
     }
 }

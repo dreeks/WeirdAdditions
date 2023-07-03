@@ -1,0 +1,15 @@
+modLoader="javafml"
+loaderVersion="[40,)"
+license="GPL-3.0-or-later"
+
+[[mods]]
+modId="weirdadditions"
+version="${file.jarVersion}"
+displayName="WeirdAdditions"
+displayURL="https://github.com/dreeks/WeirdAdditions"
+#logoFile="examplemod.png" #optional
+credits="Thanks for anybody involved in the modding scene. Thanks to all the mod players. That's what made Minecraft the way it is today."
+authors="Oxodao, Cylgom"
+description='''
+Weird additions that nobody asked for!
+'''

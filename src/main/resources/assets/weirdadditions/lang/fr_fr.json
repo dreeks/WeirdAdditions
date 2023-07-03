@@ -1,0 +1,25 @@
+{
+  "itemGroup.wa.name": "Weird Additions",
+  "item.weirdadditions.spore_extractor": "Extracteur de spore",
+  "item.weirdadditions.spore_cow": "Spore de vache",
+  "item.weirdadditions.spore_fish": "Spore de poisson",
+  "item.weirdadditions.slrf": "Chair un petit peu moins putrifiée",
+  "item.weirdadditions.elrf": "Chair encore moins putrifiée",
+  "item.weirdadditions.food_mixture": "Mixture délicieuse",
+  "item.weirdadditions.mixed_juice": "Concentré de nourriture",
+
+  "item.weirdadditions.recordmii": "Music Disc",
+  "item.weirdadditions.recordmii.desc": "Nintendo - Mii Channel",
+  "item.weirdadditions.recordhomebrew": "Music Disc",
+  "item.weirdadditions.recordhomebrew.desc": "drmr - Wii Homebrew Channel",
+  "item.weirdadditions.recordchiracsamba": "Music Disc",
+  "item.weirdadditions.recordchiracsamba.desc": "Jacques chirac feat Malto - Samba remix",
+
+  "item.weirdadditions.half_coal": "Demi-charbon",
+  "item.weirdadditions.logmover": "Déplaceur de buche d'arbre à caoutchouc",
+
+  "item.weirdadditions.hedge_trimmer": "Taille-haie",
+  "item.weirdadditions.hedge_trimmer.mode.default": "Mode: Tout",
+  "item.weirdadditions.hedge_trimmer.mode.bushes": "Mode: Buissons et plantes",
+  "item.weirdadditions.hedge_trimmer.mode.leaves": "Mode: Feuilles"
+}

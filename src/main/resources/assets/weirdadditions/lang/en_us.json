@@ -1,0 +1,25 @@
+{
+  "itemGroup.wa.name": "Weird Additions",
+  "item.weirdadditions.spore_extractor": "Spore extractor",
+  "item.weirdadditions.spore_cow": "Cow spore",
+  "item.weirdadditions.spore_fish": "Fish spore",
+  "item.weirdadditions.slrf": "Slightly less rotten flesh",
+  "item.weirdadditions.elrf": "Even less rotten flesh",
+  "item.weirdadditions.food_mixture": "Sweet food mixture",
+  "item.weirdadditions.mixed_juice": "Mixed juice",
+
+  "item.weirdadditions.recordmii": "Music Disc",
+  "item.weirdadditions.recordmii.desc": "Nintendo - Mii Channel",
+  "item.weirdadditions.recordhomebrew": "Music Disc",
+  "item.weirdadditions.recordhomebrew.desc": "drmr - Wii Homebrew Channel",
+  "item.weirdadditions.recordchiracsamba": "Music Disc",
+  "item.weirdadditions.recordchiracsamba.desc": "Jacques chirac feat Malto - Samba remix",
+
+  "item.weirdadditions.half_coal": "Half coal",
+  "item.weirdadditions.logmover": "Rubber log mover",
+
+  "item.weirdadditions.hedge_trimmer": "Hedge trimmer",
+  "item.weirdadditions.hedge_trimmer.mode.default": "Mode: Default",
+  "item.weirdadditions.hedge_trimmer.mode.bushes": "Mode: Bushes and plants",
+  "item.weirdadditions.hedge_trimmer.mode.leaves": "Mode: Leaves"
+}

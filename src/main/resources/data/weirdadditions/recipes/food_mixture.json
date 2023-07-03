@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "minecraft:carrot"},
+    {"item": "minecraft:apple"},
+    {"item": "minecraft:potato"},
+    {"item": "minecraft:beef"},
+    {"item": "weirdadditions:elrf"},
+    {"item": "minecraft:beetroot"},
+    {"item": "minecraft:cooked_porkchop"},
+    {"item": "minecraft:cod"},
+    {"item": "minecraft:melon_slice"}
+  ],
+  "result": {
+    "item": "weirdadditions:food_mixture",
+    "count": 1
+  }
+}
